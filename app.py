@@ -23,10 +23,10 @@ def api_test():
         status=200,
         mimetype='application/json'
     )
-@app.route('/underconstruction')
-def construction_function():
-    flask.url_for('static', filename='css/bootstrap.min.css')
-    return flask.render_template('underconstructionpage.html')
+# @app.route('/underconstruction')
+# def construction_function():
+#     flask.url_for('static', filename='css/bootstrap.min.css')
+#     return flask.render_template('underconstructionpage.html')
 
 if __name__ == "__main__":
     app.run()

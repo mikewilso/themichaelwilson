@@ -2,27 +2,31 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>The Michael Wilson</title>
+    <title>Under Construction!</title>
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/mystyles.css">
   </head>
   <body>
-
     <div class="container">
-      <h1>WELCOME</h1>
       <div class="jumbotron">
-        <h1 class="display-1">Hello</h1>
-        <p>Welcome to {{site_name}}</p>
+        <h1>
+          Welcome to The Michael Wilson dot com!
+        </h1>
+      </div>
+      <p>Exciting things are coming for sure, but the site is currently under construction!</p>
+      <p>Coming 2021</p>
+      <div class="center">
+        <img src="../static/img/construction6.gif">
       </div>
     </div>
-
     <script type="text/javascript">
-    fetch('/api/test')
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-      });
-    </script>
+      fetch('/api/test')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(myJson) {
+          console.log(myJson);
+        });
+      </script>
   </body>
 </html>
