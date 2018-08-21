@@ -5,34 +5,237 @@
     <title>Under Construction!</title>
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/mystyles.css">
-    <script type=“application/javascript”>
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-googletag.cmd.push(function() {
-    googletag.pubads().disableInitialLoad()
-});
-</script>
-<script type=“application/javascript”>
-var PREBID_TIMEOUT=700;window.sovrn=window.sovrn||{};window.sovrn.headersuite=window.sovrn.headersuite||{};window.sovrn.headersuite.config={“id”:“1080",“affiliateId”:“128379",“name”:“Decode_This_Main_Script”,“informerId”:“10910816",“serverAuction”:!1,“priceGranularity”:“high”,“revShare”:“”,“sendAllBids”:!1,“cmp”:!1,“auctionInHeader”:[{“slotId”:“”,“divId”:“div-gpt-ad-1533920030581-0",“viewports”:[{“minWidth”:0,“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{ \“tagid\“: 579329 }“}]}],“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{ \“tagid\“: 579329 }“}]},{“slotId”:“”,“divId”:“div-gpt-ad-1533920279637-0",“viewports”:[{“minWidth”:0,“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[300,250]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[300,250]]“,”paramsJson”:“{ \“tagid\“: 579674 }“}]}],“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[300,250]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[300,250]]“,”paramsJson”:“{ \“tagid\“: 579674 }“}]},{“slotId”:“”,“divId”:“div-gpt-ad-1533920449468-0",“viewports”:[{“minWidth”:0,“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[160,600]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[160,600]]“,”paramsJson”:“{ \“tagid\“: 579663 }“}]}],“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[160,600]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[160,600]]“,”paramsJson”:“{ \“tagid\“: 579663 }“}]},{“slotId”:“”,“divId”:“div-gpt-ad-1533920593197-0",“viewports”:[{“minWidth”:0,“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{ \“tagid\“: 579339 }“}]}],“zones”:[{“provider”:“underdogmedia”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{\“siteId\“:\“13371\“}”},{“provider”:“sovrn”,“sizesJson”:“[[728,90]]“,”paramsJson”:“{ \“tagid\“: 579339 }“}]}]};window.sovrn.headersuite.paths=window.sovrn.headersuite.paths||{};var pbjs=pbjs||{};pbjs.que=pbjs.que||[];(function(){var pbs=document.createElement(‘script’);pbs.async=!0;pbs.type=‘text/javascript’;pbs.src=‘//ap.lijit.com/www/headerauction/prebid.min.js’;var node=document.getElementsByTagName(‘script’)[0];node.parentNode.insertBefore(pbs,node)})();var googletag=googletag||{};googletag.cmd=googletag.cmd||[];var pubConfig={priceGranularity:window.sovrn.headersuite.config.priceGranularity,enableSendAllBids:window.sovrn.headersuite.config.sendAllBids,bidderTimeout:PREBID_TIMEOUT,publisherDomain:window.location.hostname,userSync:{iframeEnabled:!0}};if(window.sovrn.headersuite.config.cmp&&window.sovrn.headersuite.gdprApplies){pubConfig.consentManagement={cmpApi:‘iab’,timeout:5000,allowAuctionWithoutConsent:!0}}
-pbjs.que.push(function(){if(window.sovrn.headersuite.config.revShare){window.sovrn.headersuite.header.setCustomRevShare(window.sovrn.headersuite.config.revShare)}
-pbjs.setConfig(pubConfig)});pbjs.que.push(function(){var adUnits=window.sovrn.headersuite.header.aggregateAdUnitData(window.sovrn.headersuite.config.auctionInHeader);if(adUnits.length===0){console.error(‘No ad units configured from server-side, stop further processing’);return}
-pbjs.que.push(function(){pbjs.enableAnalytics({provider:‘sovrn’,options:{affiliateId:“128379”}})});pbjs.addAdUnits(adUnits);pbjs.requestBids({timeout:PREBID_TIMEOUT,bidsBackHandler:sendAdserverRequest})});function sendAdserverRequest(){if(pbjs.adserverRequestSent)return;pbjs.adserverRequestSent=!0;googletag.cmd.push(function(){pbjs.que.push(function(){pbjs.setTargetingForGPTAsync();googletag.pubads().refresh()})})}
-window.sovrn.headersuite.header={aggregateAdUnitData:function(aihData){var adUnits=[];if(Array.isArray(aihData)===!1){return adUnits}
-var browserWidth=window.innerWidth&&document.documentElement.clientWidth?Math.min(window.innerWidth,document.documentElement.clientWidth):window.innerWidth||document.documentElement.clientWidth||document.getElementsByTagName(‘body’)[0].clientWidth;for(var i=0;i<aihData.length;i++){var slot=aihData[i];var adUnit={slotId:slot.slotId,code:slot.divId,sizes:[],mediaTypes:{banner:{sizes:[],},},bids:[],};if(slot.viewports&&slot.viewports.length){var correctViewport={};correctViewport.zones=[];correctViewport.minWidth=-Infinity;for(var k=0;k<slot.viewports.length;k++){if(slot.viewports[k].minWidth<=browserWidth){if(slot.viewports[k].minWidth>correctViewport.minWidth){correctViewport=slot.viewports[k]}}}
-slot.zones=correctViewport.zones}
-for(var j=0;j<slot.zones.length;j++){var zone=slot.zones[j];zone.sizes=JSON.parse(zone.sizesJson.replace(/\\“/g,“\\’“));adUnit.sizes=adUnit.sizes.concat(zone.sizes);adUnit.bids=adUnit.bids.concat(this.convertZoneToBids(zone))}
-adUnit.sizes=adUnit.mediaTypes.banner.sizes=this.dedupeSizes(adUnit.sizes);adUnits.push(adUnit)}
-return adUnits},dedupeSizes:function(array){var a=array.concat();for(var i=0;i<a.length;i++){for(var j=i+1;j<a.length;j++){if(a[i][0]===a[j][0]&&a[i][1]===a[j][1]){a.splice(j--,1)}}}
-return a},setCustomRevShare:function(customRevShare){try{var revShare=JSON.parse(customRevShare);pbjs.bidderSettings={};for(var property in revShare){if(revShare.hasOwnProperty(property)){pbjs.bidderSettings[property]={bidCpmAdjustment:function(bidCpm,bid){return bidCpm*revShare[property]/100}}}}}catch(e){console.error(‘Error adjusting cpm’)}},convertZoneToBids:function(zone){var paramsBase=JSON.parse(zone.paramsJson.replace(/\\“/g,“\\’“));var baseBid={bidder:zone.provider,params:paramsBase,};if(zone.provider===‘ix’){bids=[];for(var i=0;i<zone.sizes.length;i++){var ixParams=Object.assign({},paramsBase,{size:zone.sizes[i]});bids.push(Object.assign({},baseBid,{params:ixParams}))}
-return bids}else{return baseBid}},};window.sovrn.headersuite.tracking={beaconFired:!1,sendBeacon:function(){if(this.doNotTrack()){return}
-try{var id,beacon_frame;if(this.beaconFired){return!1}
-id=‘sovrn_beacon’;beacon_frame=this.createiFrame(id,1,1);beacon_frame.src=this.getBeaconURL();document.body.appendChild(beacon_frame);this.beaconFired=!0}catch(e){console.error(‘error making beacon’,e);return!1}
-return!0},createiFrame:function(id,w,h){var ifr,iframe_style,i,j,attr,styles;ifr=document.createElement(‘iframe’);iframe_style=ifr.style;attr={id:id,margin:‘0’,padding:‘0’,frameborder:‘0’,width:w+‘’,height:h+‘’,scrolling:‘no’,src:‘about:blank’};styles={margin:‘0px’,padding:‘0px’,border:‘0px none’,width:w+‘px’,height:h+‘px’,overflow:‘hidden’};for(i in attr){if(attr.hasOwnProperty(i)){ifr.setAttribute(i,attr[i])}}
-for(j in styles){if(styles.hasOwnProperty(j)){try{iframe_style[j]=styles[j]}catch(e){}}}
-return ifr},getBeaconURL:function(){return’//gslbeacon.lijit.com/beacon?’+’rand=‘+Math.floor(9e3*Math.random())+‘&informer=‘+window.sovrn.headersuite.config.informerId+‘&type=fpads’+‘&loc=‘+window.location.host+‘&v=1.2’},sendContainer:function(){if(this.doNotTrack()){return}
-var id=‘sovrn_container’;var myIframe=this.createiFrame(id,1,1);document.body.appendChild(myIframe);var iframe_ref=document.getElementById(id);var prefix=‘<!DOCTYPE html><html><head><title>Sovrn Container</title>‘+’<meta http-equiv=“Content-Type” content=“text/html;charset=utf-8">‘+’<meta http-equiv=“X-UA-Compatible” content=“IE=edge”></head><body style=“margin:0;padding:0”>‘;var suffix=‘<scr’.concat(“ipt type=‘text/javascript’ src=‘//ap.lijit.com/res/sovrn.containertag.min.js?cid=17&v=3&aid=“+window.sovrn.headersuite.config.affiliateId+“’></sc”,‘ript></body></html>’);var sovrn_html=prefix+suffix;try{var iframe_doc=iframe_ref.contentDocument||iframe_ref.contentWindow.document;iframe_doc.open(‘text/html’,‘replace’);iframe_doc.write(sovrn_html);iframe_doc.close()}catch(ex){}},doNotTrack:function(nav,win){nav=nav||navigator;win=win||window;return nav.doNotTrack===‘yes’||nav.doNotTrack===‘1’||nav.msDoNotTrack===‘1’||win.doNotTrack===‘1’}};var el=document.getElementById(‘sovrn-header-script’);if(el){el.onload=function(){window.sovrn.headersuite.tracking.sendContainer();window.sovrn.headersuite.tracking.sendBeacon()}}
-if(typeof exports!==‘undefined’){exports.headersuite=window.sovrn.headersuite}
-</script>
+    <script>
+      //<![CDATA[
+      "use strict";
+  
+      function r(e) {
+          /in/.test(document.readyState) ? setTimeout("r(" + e + ")", 9) : e()
+      }
+  
+      function initAdserver() {
+          if (!pbjs.initAdserverSet) {
+              googletag.cmd.push(function() {
+                  pbjs.que.push(function() {
+                      pbjs.setTargetingForGPTAsync();
+                      googletag.pubads().refresh()
+                  })
+              });
+              pbjs.initAdserverSet = !0
+          }
+      }
+      var PREBID_TIMEOUT = 700;
+      window.log = function() {
+          window.log.history = window.log.history || [];
+          window.log.history.push(arguments);
+          this.console && console.log(Array.prototype.slice.call(arguments))
+      };
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      ! function() {
+          var e = document,
+              t = e.createElement("script");
+          e.location.protocol;
+          t.type = "text/javascript";
+          t.src = "//ap.lijit.com/www/headerauction/prebid.min.js";
+          var n = document.getElementsByTagName("head")[0];
+          n.insertBefore(t, n.firstChild)
+      }();
+      googletag.cmd.push(function() {
+          googletag.pubads().disableInitialLoad()
+      });
+      pbjs.que.push(function() {
+          var e = [
+      {
+          code: '/21719467383/728x90_leaderboard',
+          mediaTypes: {
+              banner: {
+                  sizes: [[728,90]]
+              }
+          },
+          bids: [{
+              bidder: 'sovrn',
+              params: {
+                  tagid: 577913
+              }
+          },
+          {
+              bidder: 'appnexus',
+              params: {
+                  placementId: 13779657
+              }
+          }]
+      },
+      {
+          code: '/21719467383/300x250_med_rec1',
+          mediaTypes: {
+              banner: {
+                  sizes: [[300,250]]
+              }
+          },
+          bids: [{
+              bidder: 'sovrn',
+              params: {
+                  tagid: 577911
+              }
+          },
+          {
+              bidder: 'appnexus',
+              params: {
+                  placementId: 13779661
+              }
+          }]
+      },
+      {
+          code: '/21719467383/300x600__half-page1',
+          mediaTypes: {
+              banner: {
+                  sizes: [[300,600]]
+              }
+          },
+          bids: [{
+              bidder: 'sovrn',
+              params: {
+                  tagid: 577912
+              }
+          },
+          {
+              bidder: 'appnexus',
+              params: {
+                  placementId: 13779659
+              }
+          }]
+      },
+      {
+          code: '/21719467383/320x50__mobile1',
+          mediaTypes: {
+              banner: {
+                  sizes: [[320,50]]
+              }
+          },
+          bids: [{
+              bidder: 'sovrn',
+              params: {
+                  tagid: 578783
+              }
+          },
+          {
+              bidder: 'appnexus',
+              params: {
+                  placementId: 13779668
+              }
+          }
+      ]}
+  
+  ];
+          pbjs.addAdUnits(e);
+          pbjs.requestBids({
+              bidsBackHandler: function(e) {
+                  initAdserver()
+              }
+          });
+          pbjs.bidderSettings = {
+              standard: {
+                  adserverTargeting: [{
+                      key: "hb_bidder",
+                      val: function(e) {
+                          return e.bidderCode
+                      }
+                  }, {
+                      key: "hb_adid",
+                      val: function(e) {
+                          return e.adId
+                      }
+                  }, {
+                      key: "hb_pb",
+                      val: function(e) {
+                          return e.pbHg
+                      }
+                  }]
+              }
+          }
+      });
+      setTimeout(initAdserver, PREBID_TIMEOUT);
+      window.sovrn = window.sovrn || {};
+      window.sovrn.auction = window.sovrn.auction || {};
+      var beaconFlag = !1;
+      window.sovrn.auction = {
+          sendBeacon: function() {
+              try {
+                  var e, t;
+                  if (beaconFlag) return !1;
+                  e = "sovrn_beacon";
+                  t = window.sovrn.auction.createiFrame(e, 1, 1);
+                  t.src = window.sovrn.auction.getBeaconURL();
+                  document.body.appendChild(t);
+                  beaconFlag = !0
+              } catch (n) {
+                  window.log("error making beacon", n);
+                  return !1
+              }
+              return !0
+          },
+          createiFrame: function(e, t, n) {
+              var o, r, a, i, c, s;
+              o = document.createElement("iframe");
+              r = o.style;
+              c = {
+                  id: e,
+                  margin: "0",
+                  padding: "0",
+                  frameborder: "0",
+                  width: t + "",
+                  height: n + "",
+                  scrolling: "no",
+                  src: "about:blank"
+              };
+              s = {
+                  margin: "0px",
+                  padding: "0px",
+                  border: "0px none",
+                  width: t + "px",
+                  height: n + "px",
+                  overflow: "hidden"
+              };
+              for (a in c) c.hasOwnProperty(a) && o.setAttribute(a, c[a]);
+              for (i in s)
+                  if (s.hasOwnProperty(i)) try {
+                      r[i] = s[i]
+                  } catch (d) {}
+              return o
+          },
+          getBeaconURL: function() {
+              var e = "//gslbeacon.lijit.com/beacon?viewId=lyfemedia_header_auction&rand=" + Math.floor(9e3 * Math.random()) + "&informer=13220495&type=fpads&loc=" + window.location.host + "&v=1.2";
+              return e
+          },
+          sendContainer: function() {
+              var e = "sovrn_container",
+                  t = window.sovrn.auction.createiFrame(e, 1, 1);
+              document.body.appendChild(t);
+              var n = document.getElementById(e),
+                  o = '<!DOCTYPE html><html><head><title>Sovrn Container</title><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"></head><body style="margin:0;padding:0">',
+                  r = "<scr".concat("ipt type='text/javascript' src='//ap.lijit.com/res/sovrn.containertag.min.js?cid=17&aid=232068'></sc", "ript></body></html>"),
+                  a = o + r;
+              try {
+                  var i = n.contentDocument || n.contentWindow.document;
+                  i.open("text/html", "replace");
+                  i.write(a)
+              } catch (c) {}
+          }
+      };
+      r(function() {
+          window.sovrn.auction.sendBeacon()
+      });
+      var reg = new RegExp("MSIE ([0-9]+[\\.0-9]*)");
+      reg.exec(navigator.userAgent) ? 10 === parseInt(RegExp.$1) && (window.onload = function() {
+          window.sovrn.auction.sendContainer()
+      }) : window.onload = function() {
+          window.sovrn.auction.sendContainer()
+      };
+      //]]>
+  </script>
   </head>
   <body>
     <div class="container">
