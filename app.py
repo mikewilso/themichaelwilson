@@ -31,7 +31,7 @@ def api_test():
 @app.route('/ads.txt')
 def construction_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
-    return flask.render_template('ads.txt')
+    return flask.render_template('ads.html')
 
 if __name__ == "__main__":
     app.run()
