@@ -31,12 +31,12 @@ def api_test():
 @app.route('/ads.txt')
 def construction_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
-    return flask.render_template('ads.html')
+    return flask.render_template('ads.txt', site_name=site_name)
 
 @app.route('/prebid_long_code_test')
 def construction_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
-    return flask.render_template('longcodetest.html')
+    return flask.render_template('longcodetest.html', site_name=site_name)
 
 if __name__ == "__main__":
     app.run()
