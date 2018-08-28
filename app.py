@@ -34,7 +34,7 @@ def construction_function():
     return flask.render_template('ads.txt')
 
 @app.route('/prebid_long_code_test')
-def construction_function():
+def longcodetest_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('longcodetest.html')
 
