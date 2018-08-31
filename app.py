@@ -38,5 +38,10 @@ def longcodetest_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('longcodetest.html')
 
+@app.route('/display_tags_hardcoded')
+def display_tags_hardcoded_function():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('displayads.html')
+
 if __name__ == "__main__":
     app.run()
