@@ -38,6 +38,11 @@ def longcodetest_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('longcodetest.html')
 
+@app.route('/hc_long_code_test')
+def hclongcodetest_function():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('hclongcodetest.html')
+
 @app.route('/display_tags_hardcoded')
 def display_tags_hardcoded_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
