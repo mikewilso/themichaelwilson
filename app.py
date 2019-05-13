@@ -48,5 +48,10 @@ def display_tags_hardcoded_function():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('displayads.html')
 
+@app.route('/target_signal_footer_test')
+def display_tags_hardcoded_function():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('footertargettest.html')
+
 if __name__ == "__main__":
     app.run()
