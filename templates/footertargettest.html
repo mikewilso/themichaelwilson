@@ -7,6 +7,79 @@
     <link rel="stylesheet" href="static/css/mystyles.css">
     <!-- //Connect Container: TheMichaelWilson-->
     <script src="//get.s-onetag.com/30d2c53f-5cf9-4970-bb4a-857591494340/tag.min.js" async defer></script>
+    <!--Sovrn prebid library endpoint-->
+<script async='async' src='//ap.lijit.com/www/headerauction/prebid.min.js'></script>
+<!--BEGIN PREBID CODE-->
+<script>
+        var PREBID_TIMEOUT = 1000;
+        var FAILSAFE_TIMEOUT = 3000;
+
+        var adUnits = [
+            {
+                code: "div-gpt-ad-1555960258549-0",
+                mediaTypes: {
+                    banner: {
+                        sizes: [[728, 90]]
+                    }
+                },
+                bids: [{
+                    bidder: "sovrn",
+                    params: {
+                        tagid: 611499
+                    }
+                }]
+            }
+        ];
+
+        // ======== DO NOT EDIT BELOW THIS LINE =========== //
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function() {
+            googletag.pubads().disableInitialLoad();
+        });
+
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+
+        pbjs.que.push(function() {
+            pbjs.addAdUnits(adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: initAdserver,
+                timeout: PREBID_TIMEOUT
+            });
+        });
+
+        function initAdserver() {
+            if (pbjs.initAdserverSet) return;
+            pbjs.initAdserverSet = true;
+            googletag.cmd.push(function() {
+                pbjs.que.push(function() {
+                    pbjs.setTargetingForGPTAsync();
+                    googletag.pubads().refresh();
+                });
+            });
+        }
+        // in case PBJS doesn't load
+        setTimeout(function() {
+            initAdserver();
+        }, FAILSAFE_TIMEOUT);
+</script>
+<!--End Prebid Code-->
+
+
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'/>
+<script>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+googletag.cmd.push(function() {
+googletag.defineSlot("/27068989/miwilson_testing_multisize_HB", [[300, 250], [728, 90], [300, 600]], "div-gpt-ad-1555960258549-0").addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
   </head>
   <body>
     <div class="container">
@@ -17,6 +90,14 @@
         <p>
             Test to see we can create a sticky footer then target with signal licensing.
         </p>
+        <h1>ManScript Header Bidding Slot</h1>
+
+        <!-- /27068989/miwilson_testing_multisize_HB -->
+        <div id='div-gpt-ad-1555960258549-0'>
+            <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1555960258549-0'); });
+            </script>
+        </div>
       </div>
     </div>
     </div>
