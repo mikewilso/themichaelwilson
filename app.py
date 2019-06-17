@@ -53,5 +53,10 @@ def test_target_footer():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('footertargettest.html')
 
+@app.route('/qa_page')
+def qa_page():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('qatestpage.html')
+
 if __name__ == "__main__":
     app.run()
