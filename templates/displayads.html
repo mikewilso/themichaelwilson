@@ -23,4 +23,33 @@
     </div>
     </div>
   </body>
+  <script>
+        //Grab container div of whitespace ad unit
+        var ad_div = document.getElementsByClassName('sovrn-onetag-ad')[0];
+        //Grab iframe containing ad
+        var nested_iframe = ad_div.firstChild;
+        //Create wrapper for iframe and label
+        var ad_wrapper = document.createElement('div');
+        //Create label
+        var ad_label = document.createElement('div');
+        
+        //Set ad div wrapper height to the ad's height for label positioning
+        ad_wrapper.style.height = nested_iframe.style.height;
+        
+        //Label styling and positioning
+        ad_label.textContent = "Advertisement";
+        ad_label.style.top = "100%";
+        ad_label.style.fontSize = "10px";
+        ad_label.style.float = "left";
+        ad_label.style.position = "relative";
+        
+        //Add wrapper div above iframe
+        nested_iframe.parentNode.insertBefore(ad_wrapper, nested_iframe);
+
+        //Put iframe inside wrapper
+        ad_wrapper.appendChild(nested_iframe);
+
+        //Add label div into the wrapper next to the iframe as sibling 
+        nested_iframe.parentNode.insertBefore(ad_label, ad_div.nextSibling);
+  </script>
 </html>
