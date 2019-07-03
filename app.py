@@ -58,5 +58,10 @@ def qa_page():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('qatestpage.html')
 
+@app.route('/test_page')
+def test_page():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('oneadtestpage.html')
+
 if __name__ == "__main__":
     app.run()
