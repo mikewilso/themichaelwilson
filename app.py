@@ -63,5 +63,10 @@ def test_page():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('oneadtestpage.html')
 
+@app.route('/wes')
+def wes_test_page():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('westest.html')
+
 if __name__ == "__main__":
     app.run()
