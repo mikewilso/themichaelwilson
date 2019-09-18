@@ -68,5 +68,11 @@ def wes_test_page():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('westest.html')
 
+@app.route('/headercomplete')
+def headercomplete_page():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('headercomplete.html')
+
+
 if __name__ == "__main__":
     app.run()
