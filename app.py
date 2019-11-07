@@ -73,6 +73,10 @@ def headercomplete_page():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('headercomplete.html')
 
+@app.route('/sync')
+def sync_test():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('synctest.html')
 
 if __name__ == "__main__":
     app.run()
