@@ -78,5 +78,10 @@ def sync_test():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('synctest.html')
 
+@app.route('/commerce_test')
+def commerce_test():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('commerce.html')        
+
 if __name__ == "__main__":
     app.run()
