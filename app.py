@@ -86,7 +86,12 @@ def commerce_test():
 @app.route('/commerce_through_connect_test')
 def commerce_in_connect_test():
     flask.url_for('static', filename='css/bootstrap.min.css')
-    return flask.render_template('commerceconnecttest.html')  
+    return flask.render_template('commerceconnecttest.html')
+
+@app.route('/connect_commerce_sticky')
+def commerce_sticky():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('commerceconnectstickyfooter.html')
 
 if __name__ == "__main__":
     app.run()
