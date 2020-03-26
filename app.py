@@ -93,6 +93,11 @@ def commerce_sticky():
     flask.url_for('static', filename='css/bootstrap.min.css')
     return flask.render_template('commerceconnectstickyfooter.html')
 
+@app.route('/commerce_through_connect_test_prod')
+def commerce_in_connect_test_prod():
+    flask.url_for('static', filename='css/bootstrap.min.css')
+    return flask.render_template('commerceconnectprod.html')
+
 @app.route("/.well-known/pki-validation/632BDE138705220EFF83EE038DC5A0FE.txt")
 def file_sender():
     return flask.send_file('static/632BDE138705220EFF83EE038DC5A0FE.txt')
